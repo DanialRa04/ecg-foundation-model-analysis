@@ -1,0 +1,334 @@
+{
+  "models": [
+    {
+      "name": "MERL",
+      "repository": "https://github.com/cheliu-computation/MERL-ICML2024",
+      "download": "https://drive.google.com/drive/folders/13wb4DppUciMn-Y_qC2JRWTbZdz3xX0w2",
+      "filename": "vit_tiny_best_encoder.pth",
+      "sampling_hz": 500,
+      "shape": [
+        12,
+        5000
+      ],
+      "preprocessing_guide": "docs/preprocessing/merl.md",
+      "analysis_group": "MERL",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "merl",
+      "source_directory": "MERL-ICML2024",
+      "checkpoint_file": "vit_tiny_best_encoder.pth"
+    },
+    {
+      "name": "ECGFounder",
+      "repository": "https://github.com/PKUDigitalHealth/ECGFounder",
+      "download": "https://huggingface.co/PKUDigitalHealth/ECGFounder/tree/main",
+      "filename": "12_lead_ECGFounder.pth",
+      "sampling_hz": 500,
+      "shape": [
+        12,
+        5000
+      ],
+      "preprocessing_guide": "docs/preprocessing/ecgfounder.md",
+      "analysis_group": "ECGFounder",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "ecgfounder",
+      "source_directory": "ECGFounder",
+      "checkpoint_file": "12_lead_ECGFounder.pth"
+    },
+    {
+      "name": "ECGFlow",
+      "repository": "https://github.com/4dm-labs/ecgflow",
+      "download": "https://huggingface.co/4dm-labs/1dvit_base_patch50_5000.ssl_mimic/tree/main",
+      "filename": "model.safetensors",
+      "sampling_hz": 500,
+      "shape": [
+        8,
+        5000
+      ],
+      "preprocessing_guide": "docs/preprocessing/ecgflow.md",
+      "analysis_group": "ECGFlow",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "ecgflow",
+      "source_directory": "ecgflow",
+      "checkpoint_file": "model.safetensors"
+    },
+    {
+      "name": "ECGFM-KED",
+      "repository": "https://github.com/control-spiderman/ECGFM-KED",
+      "download": "https://zenodo.org/records/14881564",
+      "filename": "best_valid_all_increase_with_augment_epoch_3.pt",
+      "sampling_hz": 100,
+      "shape": [
+        12,
+        1000
+      ],
+      "preprocessing_guide": "docs/preprocessing/ecgfm_ked.md",
+      "analysis_group": "ECGFM-KED",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "ecgfm_ked",
+      "source_directory": "ECGFM-KED",
+      "checkpoint_file": "best_valid_all_increase_with_augment_epoch_3.pt"
+    },
+    {
+      "name": "CLEF",
+      "repository": "https://github.com/Nokia-Bell-Labs/ecg-foundation-model",
+      "download": "https://zenodo.org/records/17572734",
+      "filename": "clef_medium.ckpt",
+      "sampling_hz": 500,
+      "shape": [
+        1,
+        5000
+      ],
+      "preprocessing_guide": "docs/preprocessing/clef.md",
+      "analysis_group": "CLEF",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "clef",
+      "source_directory": "ecg-foundation-model",
+      "checkpoint_file": "clef_medium.ckpt"
+    },
+    {
+      "name": "HeartLang",
+      "repository": "https://github.com/PKUDigitalHealth/HeartLang",
+      "download": "https://huggingface.co/PKUDigitalHealth/HeartLang/tree/main",
+      "filename": "checkpoint-200.pth",
+      "sampling_hz": 100,
+      "shape": [
+        12,
+        1000
+      ],
+      "preprocessing_guide": "docs/preprocessing/heartlang.md",
+      "analysis_group": "HeartLang",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "heartlang",
+      "source_directory": "HeartLang",
+      "checkpoint_file": "checkpoint-200.pth"
+    },
+    {
+      "name": "ECG-LFM",
+      "repository": "https://github.com/biomed-AI/ECG-LFM",
+      "download": "https://zenodo.org/records/20388950",
+      "filename": "pretrain.pt",
+      "sampling_hz": 500,
+      "shape": [
+        12,
+        2500
+      ],
+      "preprocessing_guide": "docs/preprocessing/ecg_lfm.md",
+      "analysis_group": "ECG-LFM",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "ecg_lfm",
+      "source_directory": "ECG-LFM",
+      "checkpoint_file": "pretrain.pt"
+    },
+    {
+      "name": "DeepECG-SSL",
+      "repository": "https://github.com/HeartWise-AI/DeepECG-SSL-finetune",
+      "download": "https://huggingface.co/heartwise/SSL_Pretrained_model/tree/main",
+      "filename": "SSL_pretrained.pt",
+      "sampling_hz": 250,
+      "shape": [
+        12,
+        2500
+      ],
+      "preprocessing_guide": "docs/preprocessing/deepecg_ssl.md",
+      "analysis_group": "DeepECG-SSL",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "deepecg_ssl",
+      "source_directory": "DeepECG-SSL-finetune",
+      "checkpoint_file": "SSL_pretrained.pt"
+    },
+    {
+      "name": "ECG-JEPA",
+      "repository": "https://github.com/sehunfromdaegu/ECG_JEPA",
+      "download": "https://drive.google.com/file/d/1gMOT4xjQQg0GZkY1iE6NuDzua4ALw00l/view",
+      "filename": "multiblock_epoch100.pth",
+      "sampling_hz": 250,
+      "shape": [
+        8,
+        2500
+      ],
+      "preprocessing_guide": "docs/preprocessing/ecg_jepa.md",
+      "analysis_group": "ECG-JEPA",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "ecg_jepa",
+      "source_directory": "ECG_JEPA",
+      "checkpoint_file": "multiblock_epoch100.pth"
+    },
+    {
+      "name": "ST-MEM",
+      "repository": "https://github.com/vuno/ST-MEM",
+      "download": "https://drive.google.com/file/d/1E7J-A1HqWa2f08T6Sfk5uWk-_CFJhOYQ/view",
+      "filename": "st_mem_vit_base_encoder.pth",
+      "sampling_hz": 250,
+      "shape": [
+        12,
+        2250
+      ],
+      "preprocessing_guide": "docs/preprocessing/st_mem.md",
+      "analysis_group": "ST-MEM",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "st_mem",
+      "source_directory": "ST-MEM",
+      "checkpoint_file": "st_mem_vit_base_encoder.pth"
+    },
+    {
+      "name": "ECG-CPC",
+      "repository": "https://github.com/AI4HealthUOL/ecg-fm-benchmarking",
+      "download": "https://figshare.com/articles/dataset/ECG-CPC_Checkpoint_zip/30192604?file=58173919",
+      "filename": "last_11597276.ckpt",
+      "sampling_hz": 240,
+      "shape": [
+        12,
+        2400
+      ],
+      "preprocessing_guide": "docs/preprocessing/ecg_cpc.md",
+      "analysis_group": "ECG-CPC",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "ecg_cpc",
+      "source_directory": "ecg-fm-benchmarking",
+      "checkpoint_file": "last_11597276.ckpt",
+      "checkpoint_config": "config_last_11597276_ckpt.yaml"
+    },
+    {
+      "name": "ECG-FM",
+      "repository": "https://github.com/bowang-lab/ECG-FM",
+      "download": "https://huggingface.co/wanglab/ecg-fm/tree/main",
+      "filename": "mimic_iv_ecg_physionet_pretrained.pt",
+      "sampling_hz": 500,
+      "shape": [
+        12,
+        2500
+      ],
+      "preprocessing_guide": "docs/preprocessing/ecg_fm.md",
+      "analysis_group": "ECG-FM",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "ecg_fm",
+      "source_directory": "ECG-FM",
+      "checkpoint_file": "mimic_iv_ecg_physionet_pretrained.pt"
+    },
+    {
+      "name": "HuBERT-ECG",
+      "repository": "https://github.com/Edoar-do/HuBERT-ECG",
+      "download": "https://huggingface.co/Edoardo-Coppola/hubert-ecg-base/tree/main",
+      "filename": "config.json + model weights",
+      "sampling_hz": 500,
+      "shape": [
+        12,
+        2500
+      ],
+      "preprocessing_guide": "docs/preprocessing/hubert_ecg.md",
+      "analysis_group": "HuBERT-ECG",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "hubert_ecg",
+      "source_directory": "HuBERT-ECG",
+      "checkpoint_file": "."
+    },
+    {
+      "name": "S4-CPC",
+      "repository": "https://github.com/AI4HealthUOL/ecg-pretraining-strategies",
+      "download": "https://github.com/AI4HealthUOL/ecg-pretraining-strategies/tree/main/checkpoints",
+      "filename": "cpc_e10.ckpt",
+      "sampling_hz": 240,
+      "shape": [
+        12,
+        600
+      ],
+      "preprocessing_guide": "docs/preprocessing/s4_cpc.md",
+      "analysis_group": "S4",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "s4_cpc",
+      "source_directory": "ecg-pretraining-strategies",
+      "checkpoint_file": "cpc_e10.ckpt",
+      "model_config": "checkpoints/config_cpc_ecg_s4.yaml"
+    },
+    {
+      "name": "S4-Data2Vec",
+      "repository": "https://github.com/AI4HealthUOL/ecg-pretraining-strategies",
+      "download": "https://github.com/AI4HealthUOL/ecg-pretraining-strategies/tree/main/checkpoints",
+      "filename": "data2vec_e10.ckpt",
+      "sampling_hz": 240,
+      "shape": [
+        12,
+        600
+      ],
+      "preprocessing_guide": "docs/preprocessing/s4_data2vec.md",
+      "analysis_group": "S4",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "s4_data2vec",
+      "source_directory": "ecg-pretraining-strategies",
+      "checkpoint_file": "data2vec_e10.ckpt",
+      "model_config": "checkpoints/config_data2vec_ecg_s4.yaml"
+    },
+    {
+      "name": "S4-DinoSR",
+      "repository": "https://github.com/AI4HealthUOL/ecg-pretraining-strategies",
+      "download": "https://github.com/AI4HealthUOL/ecg-pretraining-strategies/tree/main/checkpoints",
+      "filename": "dinosr_e10.ckpt",
+      "sampling_hz": 240,
+      "shape": [
+        12,
+        600
+      ],
+      "preprocessing_guide": "docs/preprocessing/s4_dinosr.md",
+      "analysis_group": "S4",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "s4_dinosr",
+      "source_directory": "ecg-pretraining-strategies",
+      "checkpoint_file": "dinosr_e10.ckpt",
+      "model_config": "checkpoints/config_dinosr_ecg_s4.yaml"
+    },
+    {
+      "name": "S4-JEPA",
+      "repository": "https://github.com/AI4HealthUOL/ecg-pretraining-strategies",
+      "download": "https://github.com/AI4HealthUOL/ecg-pretraining-strategies/tree/main/checkpoints",
+      "filename": "jepa_e10.ckpt",
+      "sampling_hz": 240,
+      "shape": [
+        12,
+        600
+      ],
+      "preprocessing_guide": "docs/preprocessing/s4_jepa.md",
+      "analysis_group": "S4",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "s4_jepa",
+      "source_directory": "ecg-pretraining-strategies",
+      "checkpoint_file": "jepa_e10.ckpt",
+      "model_config": "checkpoints/config_jepa_ecg_s4.yaml"
+    },
+    {
+      "name": "S4-HuBERT++",
+      "repository": "https://github.com/AI4HealthUOL/ecg-pretraining-strategies",
+      "download": "https://github.com/AI4HealthUOL/ecg-pretraining-strategies/tree/main/checkpoints",
+      "filename": "hubert++_e10.ckpt",
+      "sampling_hz": 240,
+      "shape": [
+        12,
+        600
+      ],
+      "preprocessing_guide": "docs/preprocessing/s4_hubertpp.md",
+      "analysis_group": "S4",
+      "evaluation_dataset_exposure": null,
+      "exposure_reference": null,
+      "integration": "s4_hubertpp",
+      "source_directory": "ecg-pretraining-strategies",
+      "checkpoint_file": "hubert++_e10.ckpt",
+      "model_config": "checkpoints/config_skkmeans_ecg_s4.yaml"
+    }
+  ]
+}

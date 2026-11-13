@@ -1,0 +1,17 @@
+descriptor,matrix,definition
+rankme,uncentered,exp entropy of singular-value probabilities; epsilon added then probabilities renormalized
+effective_rank,centered,exp entropy of squared-singular-value probabilities
+participation_ratio,centered,squared total spectral energy divided by sum of squared component energies
+stable_rank,centered,total spectral energy divided by largest component energy
+spectral_entropy,centered,Shannon entropy of component energies using natural logarithms
+normalized_spectral_entropy,centered,"spectral entropy divided by log(min(samples, features))"
+singular_value_decay_exponent,centered,negative slope of log singular value against log component rank; relative singular cutoff 1e-12
+largest_spectral_component_fraction,centered,largest component energy divided by total energy
+top_5_percent_spectral_energy,centered,energy share in the largest ceil(0.05 * component_count) components; minimum one
+top_10_percent_spectral_energy,centered,energy share in the largest ceil(0.10 * component_count) components; minimum one
+top_25_percent_spectral_energy,centered,energy share in the largest ceil(0.25 * component_count) components; minimum one
+feature_variance_coefficient_of_variation,centered,population standard deviation of feature variances divided by their mean
+near_zero_variance_dimension_fraction,centered,fraction of dimensions with variance <= maximum feature variance * variance_tolerance
+centered_mean_pairwise_cosine_similarity,centered,off-diagonal mean cosine over nonzero-norm rows
+centroid_to_sample_norm_ratio,uncentered,centroid norm divided by mean sample norm
+uncentered_mean_pairwise_cosine_similarity,uncentered,off-diagonal mean cosine over nonzero-norm rows

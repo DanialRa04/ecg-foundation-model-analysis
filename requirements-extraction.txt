@@ -1,0 +1,4 @@
+-r requirements-core.txt
+# Install PyTorch and model dependencies in the author's environment.
+# Choose an author-compatible, maintained CPU/CUDA build; see docs/models.md.
+# The local verification environment is recorded in docs/verification.md.

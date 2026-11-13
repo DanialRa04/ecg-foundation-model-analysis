@@ -1,0 +1,5 @@
+-r requirements-core.txt
+matplotlib==3.10.5
+# Patched minimums for Matplotlib's image and font dependencies.
+pillow>=13.0.0
+fonttools>=4.60.2

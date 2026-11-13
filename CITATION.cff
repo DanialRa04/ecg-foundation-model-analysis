@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this workflow, please cite this repository and the dataset, models, and methods you use."
+type: software
+title: "ECG Foundation Model Analysis"
+abstract: "A reproducible Python research workflow for ECG preprocessing, frozen embedding extraction, representation geometry, downstream evaluation, and statistical analysis."
+authors:
+  - name: "DanialRa04"
+    website: "https://github.com/DanialRa04"
+repository-code: "https://github.com/DanialRa04/ecg-foundation-model-analysis"
+url: "https://github.com/DanialRa04/ecg-foundation-model-analysis"
+license: MIT
+keywords:
+  - ECG
+  - electrocardiogram
+  - foundation models
+  - representation geometry
+  - embeddings
+  - downstream evaluation
+  - statistical analysis
+  - reproducible research

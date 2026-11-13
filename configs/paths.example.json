@@ -1,0 +1,16 @@
+{
+  "paths": {
+    "dataset_root": "../data/PTB-XL",
+    "checkpoint_root": "../checkpoints",
+    "external_source_root": "../external",
+    "embeddings_root": "../private/embeddings",
+    "cache_root": "../cache",
+    "run_output_root": "../outputs"
+  },
+  "relative_path_base": "configuration_file_directory",
+  "models": {
+    "ECGFlow": {"dependencies": ["../external/pytorch-image-models-ecgflow"]},
+    "ECG-FM": {"dependencies": ["../external/fairseq-signals"]},
+    "DeepECG-SSL": {"dependencies": ["../external/fairseq-signals"]}
+  }
+}

@@ -1,0 +1,4 @@
+-r requirements-core.txt
+scipy==1.16.2
+wfdb==4.3.1
+resampy==0.4.3
