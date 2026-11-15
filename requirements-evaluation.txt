@@ -1,0 +1,4 @@
+-r requirements-core.txt
+scipy>=1.16.1,<1.17
+scikit-learn==1.7.1
+# Install a maintained, compatible PyTorch build separately for the ANN probe.

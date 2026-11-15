@@ -1,0 +1,32 @@
+{
+  "probes": {
+    "ann": {
+      "hidden_dims": [
+        256,
+        128
+      ],
+      "normalization": "LayerNorm",
+      "activation": "GELU",
+      "dropout": 0.2,
+      "optimizer": "AdamW",
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0001,
+      "batch_size": 256,
+      "maximum_epochs": 100,
+      "patience": 10,
+      "minimum_improvement": 1e-08,
+      "selection_metric": "validation_average_precision",
+      "binary_loss": "BCEWithLogitsLoss with training negative/positive weight",
+      "multiclass_loss": "CrossEntropyLoss with inverse-frequency weights normalized to mean one"
+    },
+    "linear": {
+      "estimator": "logistic_regression",
+      "penalty": "l2",
+      "C": 1.0,
+      "solver": "liblinear",
+      "maximum_iterations": 2000,
+      "class_weight": "balanced",
+      "multiclass_strategy": "one_vs_rest"
+    }
+  }
+}
