@@ -1,0 +1,65 @@
+{
+  "selection": {
+    "probe": null,
+    "metric": null,
+    "fraction": null,
+    "method": null,
+    "section": "auto",
+    "cohort": "all"
+  },
+  "display": {"digits": 3, "coefficient_digits": 2, "missing": "—", "q_threshold": 0.05},
+  "figures": {
+    "formats": ["png", "svg", "pdf"],
+    "dpi": 180,
+    "maximum_rows": 18,
+    "maximum_columns": 8,
+    "panels_per_page": 4,
+    "scatter_descriptors": ["rankme", "effective_rank", "participation_ratio", "stable_rank"]
+  },
+  "style": {
+    "font_family": "DejaVu Sans",
+    "font_size": 10,
+    "performance_cmap": "cividis",
+    "association_cmap": "RdBu_r",
+    "missing_color": "#e9edf2",
+    "palette": ["#0072B2", "#D55E00", "#009E73", "#CC79A7", "#E69F00", "#56B4E9", "#000000", "#7A6F55"]
+  },
+  "labels": {
+    "tasks": {
+      "atrial_fibrillation": "Atrial fibrillation",
+      "sinus_rhythm": "Sinus rhythm",
+      "tachycardia": "Tachycardia",
+      "bradycardia": "Bradycardia",
+      "rbbb": "RBBB",
+      "lbbb": "LBBB",
+      "av_block": "AV block",
+      "qrs_axis": "QRS axis",
+      "st_t_abnormality": "ST/T abnormality",
+      "left_ventricular_hypertrophy": "Left ventricular hypertrophy",
+      "myocardial_infarction": "Myocardial infarction",
+      "st_elevation": "ST elevation",
+      "st_depression": "ST depression"
+    },
+    "descriptors": {
+      "rankme": "RankMe",
+      "effective_rank": "Effective rank",
+      "participation_ratio": "Participation ratio",
+      "stable_rank": "Stable rank",
+      "spectral_entropy": "Spectral entropy",
+      "normalized_spectral_entropy": "Normalized spectral entropy",
+      "singular_value_decay_exponent": "Singular-value decay exponent",
+      "largest_spectral_component_fraction": "Largest component energy",
+      "top_5_percent_spectral_energy": "Top 5% spectral energy",
+      "top_10_percent_spectral_energy": "Top 10% spectral energy",
+      "top_25_percent_spectral_energy": "Top 25% spectral energy",
+      "feature_variance_coefficient_of_variation": "Feature variance CV",
+      "near_zero_variance_dimension_fraction": "Near-zero variance fraction",
+      "centered_mean_pairwise_cosine_similarity": "Centered mean cosine",
+      "centroid_to_sample_norm_ratio": "Centroid / sample norm",
+      "uncentered_mean_pairwise_cosine_similarity": "Uncentered mean cosine"
+    },
+    "probes": {"ann": "ANN", "linear": "Logistic regression"},
+    "metrics": {"average_precision": "Average precision", "auroc": "AUROC"},
+    "methods": {"spearman": "Spearman", "pearson": "Pearson", "kendall": "Kendall"}
+  }
+}
