@@ -1,0 +1,62 @@
+# Local environments and generated Python files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Private settings and credentials
+.env
+.env.*
+!.env.example
+configs/paths.local.*
+
+# User-provided assets: track our placeholder instructions only
+/data/*
+!/data/README.md
+!/data/.gitkeep
+/checkpoints/*
+!/checkpoints/README.md
+!/checkpoints/.gitkeep
+/external/*
+!/external/README.md
+!/external/.gitkeep
+
+# All experiment results and figures stay local; track folder instructions only
+/results/*
+!/results/README.md
+/figures/*
+!/figures/README.md
+
+# Local run and verification artifacts
+/outputs/
+/cache/
+/logs/
+/private/
+
+# Additional model binaries wherever users place them
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.bin
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.parquet
+*.arrow
+*.dat
+*.hea
+
+# Potential input/archive dumps require explicit content review before inclusion
+*.zip
+*.tar
+*.gz
+*.7z
+*.pkl
+*.pickle
+
+# Ignore rules are not a substitute for reviewing files selected for publication.
