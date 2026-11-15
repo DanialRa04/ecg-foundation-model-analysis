@@ -1,0 +1,112 @@
+{
+  "code_membership": "presence of code key, without a confidence threshold",
+  "taxonomy_file": "scp_statements.csv",
+  "tasks": [
+    {
+      "id": "atrial_fibrillation",
+      "target_type": "binary_codes",
+      "codes": [
+        "AFIB"
+      ]
+    },
+    {
+      "id": "sinus_rhythm",
+      "target_type": "binary_codes",
+      "codes": [
+        "SR"
+      ]
+    },
+    {
+      "id": "tachycardia",
+      "target_type": "binary_codes",
+      "codes": [
+        "STACH",
+        "SVTAC",
+        "PSVT"
+      ]
+    },
+    {
+      "id": "bradycardia",
+      "target_type": "binary_codes",
+      "codes": [
+        "SBRAD"
+      ]
+    },
+    {
+      "id": "rbbb",
+      "target_type": "binary_codes",
+      "codes": [
+        "IRBBB",
+        "CRBBB"
+      ]
+    },
+    {
+      "id": "lbbb",
+      "target_type": "binary_codes",
+      "codes": [
+        "ILBBB",
+        "CLBBB"
+      ]
+    },
+    {
+      "id": "av_block",
+      "target_type": "binary_codes",
+      "codes": [
+        "1AVB",
+        "2AVB",
+        "3AVB"
+      ]
+    },
+    {
+      "id": "qrs_axis",
+      "target_type": "multiclass_column",
+      "column": "heart_axis",
+      "minimum_full_training_support": 50
+    },
+    {
+      "id": "st_t_abnormality",
+      "target_type": "binary_union",
+      "codes": [
+        "STD_",
+        "STE_",
+        "LOWT",
+        "NT_",
+        "INVT",
+        "TAB_"
+      ],
+      "taxonomy_column": "diagnostic_class",
+      "taxonomy_values": [
+        "STTC"
+      ]
+    },
+    {
+      "id": "left_ventricular_hypertrophy",
+      "target_type": "binary_codes",
+      "codes": [
+        "LVH"
+      ]
+    },
+    {
+      "id": "myocardial_infarction",
+      "target_type": "binary_taxonomy",
+      "taxonomy_column": "diagnostic_class",
+      "taxonomy_values": [
+        "MI"
+      ]
+    },
+    {
+      "id": "st_elevation",
+      "target_type": "binary_codes",
+      "codes": [
+        "STE_"
+      ]
+    },
+    {
+      "id": "st_depression",
+      "target_type": "binary_codes",
+      "codes": [
+        "STD_"
+      ]
+    }
+  ]
+}
