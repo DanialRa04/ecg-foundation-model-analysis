@@ -1,0 +1,174 @@
+{
+  "question": "How does ECG embedding geometry relate to downstream performance?",
+  "files": {
+    "models": "models.json",
+    "tasks": "tasks.json",
+    "descriptors": "descriptors.json",
+    "probes": "probes.json"
+  },
+  "dataset": {
+    "name": "PTB-XL",
+    "version": "1.0.3",
+    "record_column": "ecg_id",
+    "patient_column": "patient_id",
+    "fold_column": "strat_fold",
+    "splits": {
+      "train": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "validation": [
+        9
+      ],
+      "test": [
+        10
+      ]
+    }
+  },
+  "model_ids": [
+    "MERL",
+    "ECGFounder",
+    "ECGFlow",
+    "ECGFM-KED",
+    "CLEF",
+    "HeartLang",
+    "ECG-LFM",
+    "DeepECG-SSL",
+    "ECG-JEPA",
+    "ST-MEM",
+    "ECG-CPC",
+    "ECG-FM",
+    "HuBERT-ECG",
+    "S4-CPC",
+    "S4-Data2Vec",
+    "S4-DinoSR",
+    "S4-JEPA",
+    "S4-HuBERT++"
+  ],
+  "task_ids": [
+    "atrial_fibrillation",
+    "sinus_rhythm",
+    "tachycardia",
+    "bradycardia",
+    "rbbb",
+    "lbbb",
+    "av_block",
+    "qrs_axis",
+    "st_t_abnormality",
+    "left_ventricular_hypertrophy",
+    "myocardial_infarction",
+    "st_elevation",
+    "st_depression"
+  ],
+  "representation": {
+    "layer": "final",
+    "frozen": true,
+    "evaluation_mode": true,
+    "pooling": "model_specific",
+    "seed": 42
+  },
+  "training": {
+    "fractions": [
+      0.5,
+      1.0
+    ],
+    "primary_fraction": 1.0,
+    "manifest_seed": 42,
+    "probe_seeds": [
+      42,
+      43
+    ],
+    "patient_subset": {
+      "method": "greedy_label_balanced_bins",
+      "bins": 2,
+      "patient_count_penalty": 0.05,
+      "balance_features": [
+        "record_count",
+        "task_positive_counts",
+        "sex_counts",
+        "age_band_counts"
+      ],
+      "age_band_edges": [
+        0,
+        40,
+        60,
+        75,
+        null
+      ],
+      "fraction_bins": {
+        "0.5": [
+          1
+        ],
+        "1.0": [
+          1,
+          2
+        ]
+      }
+    }
+  },
+  "evaluation": {
+    "probe_ids": [
+      "ann",
+      "linear"
+    ],
+    "primary_probe": "ann",
+    "primary_metric": "average_precision",
+    "secondary_metric": "auroc",
+    "scaler": "training_subset_standard_scaler",
+    "multiclass_average": "macro_one_vs_rest_evaluable_classes",
+    "single_class_metric": "null_with_support_flag",
+    "invalid_training_cohort": "skip_with_reason",
+    "binary_threshold": 0.5,
+    "aggregate_seeds": "mean_and_sample_standard_deviation"
+  },
+  "analysis": {
+    "primary_method": "spearman",
+    "secondary_methods": [
+      "pearson",
+      "kendall"
+    ],
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 42,
+    "confidence_level": 0.95,
+    "interval": "percentile_model_group_bootstrap",
+    "p_values": "two_sided_standard_correlation_tests",
+    "p_value_unit": "checkpoint_rows",
+    "fdr_method": "Benjamini-Hochberg",
+    "fdr_family": [
+      "section",
+      "cohort",
+      "probe",
+      "metric",
+      "method"
+    ],
+    "task_agnostic_summary": "mean_within_task_percentile",
+    "sensitivities": [
+      "documented_unexposed_only",
+      "leave_one_model_out",
+      "analysis_group_aggregation",
+      "exact_duplicate_representations",
+      "input_contract_adjustment"
+    ]
+  },
+  "reliability": {
+    "minimum_training_minority_warning": 50,
+    "minimum_evaluation_minority_warning": 20
+  },
+  "outputs": {
+    "directory_policy": "new_run_directory",
+    "formats": [
+      "csv",
+      "json",
+      "png",
+      "svg"
+    ],
+    "undefined_json": "null",
+    "record_sample_level_outputs": "local_only"
+  }
+}

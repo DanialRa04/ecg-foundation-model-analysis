@@ -1,0 +1,2 @@
+# Descriptor calculations and analytical checks
+numpy==2.1.2
